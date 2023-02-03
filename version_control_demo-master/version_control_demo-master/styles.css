@@ -1,0 +1,59 @@
+/* HTML element selectors */
+* 
+{
+	font-family: Arial, sans-serif;
+    padding: 0px;
+}
+
+body
+{
+    background-color: lightgray;
+    margin: 20px 40px;
+}
+
+/* Class selectors */
+.menu_image
+{
+	float: left;
+	height: 150px;
+	margin-right: 40px;
+	width: 150px;
+}
+
+.tabcontent 
+{
+	color: white;
+	display: none;
+	min-height: 150px;
+	padding: 50px;
+}
+
+.tablink 
+{
+	background-color: #555;
+	color: white;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	padding: 14px 16px;
+	font-size: 17px;
+}
+
+.tablink:hover 
+{
+	background-color: #777;
+}
+
+/* ID selectors */
+#button_wrapper { display: flex; }
+
+#button_wrapper button { flex-grow: 1; }
+
+#drinks { background-color: lightseagreen; }
+
+#entrees { background-color: dodgerblue; }
+
+#menu_wrapper {	max-width: 950px; }
+
+#sides { background-color: goldenrod; }
+

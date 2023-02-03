@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <title>Jonny Cart-o-food | Menu</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <h1>Da Menu</h1>
+
+    <div id="menu_wrapper">
+		<div id="button_wrapper">
+			<button class="tablink" onclick="openTab('sides',this,'goldenrod')" id="defaultOpen">Sides</button>
+			<button class="tablink" onclick="openTab('entrees',this,'dodgerblue')">Entrees</button>
+			<button class="tablink" onclick="openTab('drinks',this,'lightseagreen')">Drinks</button>
+		</div>
+
+        <div id="button_content">
+            <div id="sides" class="tabcontent">
+				<img src="assets/food1.png" alt="Sides logo" class="menu_image" >
+                <h2>Sides</h2>
+                <p>Qui soluta quisquam ex reprehenderit voluptatem et corporis perspiciatis et tenetur impedit sit expedita beatae. Non excepturi nesciunt ad officiis itaque in odit dolorem. </p>
+            </div>
+
+            <div id="entrees" class="tabcontent">
+				<img src="assets/food2.jpg" alt="Entrees logo" class="menu_image" >
+                <h2>Entrees</h2>
+                <p>Ut sunt dignissimos et ipsum nostrum ut sunt iste vel architecto placeat in rerum voluptates. Quo nihil voluptates et laboriosam sequi ut dolorem dolores est nisi minima aut quae officia sit magnam voluptatibus est delectus ipsam.</p>
+            </div>
+
+            <div id="drinks" class="tabcontent">
+				<img src="assets/food3.png" alt="Drinks logo" class="menu_image" >
+                <h2>Drinks</h2>
+                <p>Et excepturi galisum et autem culpa non veritatis doloremque ut quia iusto et inventore perspiciatis et voluptatem laudantium est exercitationem accusamus? In repellendus reprehenderit est odio temporibus ea provident deleniti eum neque sunt id inventore voluptatem est praesentium maxime?</p>
+            </div>
+        </div> <!-- end button content -->
+    </div> <!-- end menu wrapper -->
+<script>
+
+function openTab( tabName, element, color )
+{
+	var i;
+	var tabcontent;
+	var tablinks;
+
+	<!-- Hide all tab content divs by setting the display to 'none'. -->
+	tabcontent = document.getElementsByClassName("tabcontent");
+	for (i = 0; i < tabcontent.length; i++) 
+	{
+		tabcontent[i].style.display = "none";
+	}
+
+	<!-- Clear the background color for all of the tablink buttons. -->
+	tablinks = document.getElementsByClassName("tablink");
+	for (i = 0; i < tablinks.length; i++) 
+	{
+		tablinks[i].style.backgroundColor = "";
+	}
+
+	<!-- For the element that was picked - set its display to block to unhide it. -->
+	document.getElementById(tabName).style.display = "block";
+	element.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it.
+document.getElementById("defaultOpen").click();
+
+</script>
+
+</body>
+</html>
